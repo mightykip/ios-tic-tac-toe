@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var messageToUser: UILabel!
 
+    @IBAction func buttonClicked(_ sender: UIButton) {
+        print("touched")
+    }
 }
 
