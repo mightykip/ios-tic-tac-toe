@@ -23,11 +23,11 @@ class TicTacToeGame {
         func getMessageToShowInUI() -> String {
             switch self {
             case.playerOneTurn:
-                return "Player X - Go!"
+                return "X - Your Move!"
             case.playerOneWins:
                 return "Player X Wins!"
             case.playerTwoTurn:
-                return "Player O - Go!"
+                return "O - Your Move!"
             case.playerTwoWins:
                 return "Player O Wins!"
             case .stalemate:
@@ -127,14 +127,13 @@ class TicTacToeGame {
     func checkIfPlayerWins(player: Int) -> Bool {
         var wins = false
         if boardState[0] == player && boardState[1] == player && boardState[2] == player
-            || boardState[4] == player && boardState[5] == player && boardState[6] == player
+            || boardState[3] == player && boardState[4] == player && boardState[5] == player
             || boardState[6] == player && boardState[7] == player && boardState[8] == player
-            || boardState[0] == player && boardState[4] == player && boardState[8] == player
-            || boardState[2] == player && boardState[4] == player && boardState[6] == player
-            || boardState[2] == player && boardState[4] == player && boardState[6] == player
             || boardState[0] == player && boardState[3] == player && boardState[6] == player
             || boardState[1] == player && boardState[4] == player && boardState[7] == player
             || boardState[2] == player && boardState[5] == player && boardState[8] == player
+            || boardState[0] == player && boardState[4] == player && boardState[8] == player
+            || boardState[2] == player && boardState[4] == player && boardState[6] == player
         {
             wins = true
         }

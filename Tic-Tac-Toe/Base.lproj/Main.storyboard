@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -26,66 +26,73 @@
                                 <rect key="frame" x="20" y="28" width="627" height="339"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wu-5L-8nA">
-                                        <rect key="frame" x="0.0" y="0.0" width="627" height="27.5"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="627" height="24"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="24"/>
+                                        <color key="textColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xfz-nl-JJW">
-                                        <rect key="frame" x="0.0" y="37.5" width="627" height="301.5"/>
+                                    <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xfz-nl-JJW">
+                                        <rect key="frame" x="0.0" y="34" width="627" height="305"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-zp-6S3">
-                                                <rect key="frame" x="0.0" y="0.0" width="627" height="94"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-zp-6S3">
+                                                <rect key="frame" x="0.0" y="0.0" width="627" height="99"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxO-ZJ-dws">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202.5" height="94"/>
-                                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="99"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="X"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WH7-ME-63J"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TB6-C1-lys">
-                                                        <rect key="frame" x="212.5" y="0.0" width="202" height="94"/>
-                                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="99"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A3r-oV-IqL"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgF-E5-jpC">
-                                                        <rect key="frame" x="424.5" y="0.0" width="202.5" height="94"/>
-                                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="99"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="X"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EeS-wq-D8f"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FeN-hZ-n4c">
-                                                <rect key="frame" x="0.0" y="104" width="627" height="93.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FeN-hZ-n4c">
+                                                <rect key="frame" x="0.0" y="103" width="627" height="99"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgr-1C-Qyt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202.5" height="93.5"/>
-                                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="99"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TIq-eo-KpT"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNG-NN-iIL">
-                                                        <rect key="frame" x="212.5" y="0.0" width="202" height="93.5"/>
-                                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="99"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="X"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K5q-hg-fvu"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zg3-nP-DPj">
-                                                        <rect key="frame" x="424.5" y="0.0" width="202.5" height="93.5"/>
-                                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="99"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wp3-Qq-6Cd"/>
@@ -93,28 +100,31 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hWc-JN-XLu">
-                                                <rect key="frame" x="0.0" y="207.5" width="627" height="94"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hWc-JN-XLu">
+                                                <rect key="frame" x="0.0" y="206" width="627" height="99"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3K-1M-GBh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="202.5" height="94"/>
-                                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="99"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="X"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZiA-YC-HqC"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jke-4B-pfi">
-                                                        <rect key="frame" x="212.5" y="0.0" width="202" height="94"/>
-                                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="99"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZC-Gp-BqH"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yz5-46-1WA">
-                                                        <rect key="frame" x="424.5" y="0.0" width="202.5" height="94"/>
-                                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="99"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rsN-h9-uDc"/>
@@ -123,11 +133,13 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5ba-N9-bQg" secondAttribute="bottom" constant="8" symbolic="YES" id="8J0-tQ-f9x"/>
                             <constraint firstItem="5ba-N9-bQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="I8F-di-R9b"/>
@@ -141,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77.9296875" y="43.75"/>
+            <point key="canvasLocation" x="77.811094452773617" y="42.399999999999999"/>
         </scene>
     </scenes>
 </document>
