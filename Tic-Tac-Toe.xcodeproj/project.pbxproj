@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37BBF1B41DD525BF00DAE300 /* TicTacToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BBF1B31DD525BF00DAE300 /* TicTacToeGame.swift */; };
 		37C298461DD2691E007709A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C298451DD2691E007709A8 /* AppDelegate.swift */; };
 		37C298481DD2691E007709A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C298471DD2691E007709A8 /* ViewController.swift */; };
 		37C2984B1DD2691E007709A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C298491DD2691E007709A8 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37BBF1B31DD525BF00DAE300 /* TicTacToeGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeGame.swift; sourceTree = "<group>"; };
 		37C298421DD2691E007709A8 /* Tic-Tac-Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-Tac-Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C298451DD2691E007709A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37C298471DD2691E007709A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				37C298451DD2691E007709A8 /* AppDelegate.swift */,
 				37C298471DD2691E007709A8 /* ViewController.swift */,
+				37BBF1B31DD525BF00DAE300 /* TicTacToeGame.swift */,
 				37C298491DD2691E007709A8 /* Main.storyboard */,
 				37C2984C1DD2691E007709A8 /* Assets.xcassets */,
 				37C2984E1DD2691E007709A8 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37BBF1B41DD525BF00DAE300 /* TicTacToeGame.swift in Sources */,
 				37C298481DD2691E007709A8 /* ViewController.swift in Sources */,
 				37C298461DD2691E007709A8 /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +303,7 @@
 				37C298561DD2691E007709A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
