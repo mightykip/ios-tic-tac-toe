@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var messageToUser: UILabel!
 
-    let game = TicTacToeGame()
+    private let game = TicTacToeGame()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +36,12 @@ class ViewController: UIViewController {
         messageToUser.text = game.getMessageToShowInUI()
     }
     
-    @IBAction func buttonClicked(_ sender: UIButton) {
+    @IBAction func buttonClicked(_ boardButton: UIButton) {
         if game.isPlayerTurn() {
-            sender.setTitle(game.getPlayerSymbol(), for: .normal)
-            game.playerTookTurn(boardPosition: sender.tag)
+            boardButton.setTitle(game.getPlayerSymbol(), for: .normal)
+            game.playerTookTurn(boardPosition: boardButton.tag)
             updateUIMessage()
-        } else if game.isOver() {
+        } else if game.isFinished() {
             resetBoard()
             updateUIMessage()
         }

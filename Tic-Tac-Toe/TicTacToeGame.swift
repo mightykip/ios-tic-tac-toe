@@ -10,138 +10,121 @@ import Foundation
 
 class TicTacToeGame {
     
-    var currentGameState = GameState.playerOneTurn
-    var boardState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    private static let EmptyGameBoard = [ 0, 0, 0,
+                                          0, 0, 0,
+                                          0, 0, 0 ]
     
-    enum GameState {
-        case playerOneTurn,
-        playerOneWins,
-        playerTwoTurn,
-        playerTwoWins,
-        stalemate
+    private static let GameStateData: [GameState: [String]] = [
+        .playerOneTurn: ["X - Your Move!", "X", "1"],
+        .playerTwoTurn: ["O - Your Move!", "O", "2"],
+        .playerOneWins: ["Player X Wins!", "", ""],
+        .playerTwoWins: ["Player O Wins!", "", ""],
+        .stalemate: ["No One Wins!", "", ""]
+    ]
+    
+    private var gameState = GameState.playerOneTurn
+    private var gameBoard = EmptyGameBoard
+    
+    private enum GameState {
+        case playerOneTurn
+        case playerOneWins
+        case playerTwoTurn
+        case playerTwoWins
+        case stalemate
         
         func getMessageToShowInUI() -> String {
-            switch self {
-            case.playerOneTurn:
-                return "X - Your Move!"
-            case.playerOneWins:
-                return "Player X Wins!"
-            case.playerTwoTurn:
-                return "O - Your Move!"
-            case.playerTwoWins:
-                return "Player O Wins!"
-            case .stalemate:
-                return "No One Wins!"
-            }
+            return TicTacToeGame.GameStateData[self]![0]
         }
         
         func getPlayerSymbol() -> String {
-            switch self {
-            case.playerOneTurn:
-                return "X"
-            case.playerTwoTurn:
-                return "O"
-            default:
-                return ""
-            }
+            return TicTacToeGame.GameStateData[self]![1]
         }
         
         func getPlayerInt() -> Int {
-            switch self {
-            case.playerOneTurn:
-                return 1
-            case.playerTwoTurn:
-                return 2
-            default:
-                return 0
-            }
+            return Int(TicTacToeGame.GameStateData[self]![2])!
         }
         
     }
     
     func reset() {
-        currentGameState = GameState.playerOneTurn
-        boardState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        gameState = GameState.playerOneTurn
+        gameBoard = TicTacToeGame.EmptyGameBoard
     }
     
     func getMessageToShowInUI() -> String {
-        return currentGameState.getMessageToShowInUI()
+        return gameState.getMessageToShowInUI()
     }
     
     func getPlayerSymbol() -> String {
-        return currentGameState.getPlayerSymbol()
+        return gameState.getPlayerSymbol()
     }
     
     func isPlayerTurn() -> Bool {
-        return currentGameState == GameState.playerOneTurn || currentGameState == GameState.playerTwoTurn
+        return gameState == .playerOneTurn || gameState == .playerTwoTurn
     }
     
     func playerTookTurn(boardPosition: Int) {
-        boardState[boardPosition - 1] = currentGameState.getPlayerInt()
-        updateState()
+        gameBoard[boardPosition - 1] = gameState.getPlayerInt()
+        updateGameState()
     }
 
-    func updateState() {
-        if isOver() {
+    private func updateGameState() {
+        if isFinished() {
             if didPlayerOneWin() {
-                currentGameState = GameState.playerOneWins
+                gameState = .playerOneWins
             } else if didPlayerTwoWin() {
-                currentGameState = GameState.playerTwoWins
+                gameState = .playerTwoWins
             } else {
-                currentGameState = GameState.stalemate
+                gameState = .stalemate
             }
         } else {
-            switch currentGameState {
-            case.playerOneTurn:
-                currentGameState = GameState.playerTwoTurn
-            case.playerTwoTurn:
-                currentGameState = GameState.playerOneTurn
+            switch gameState {
+            case .playerOneTurn:
+                gameState = .playerTwoTurn
+            case .playerTwoTurn:
+                gameState = .playerOneTurn
             default:
                 break
             }
         }
     }
     
-    func isOver() -> Bool {
+    func isFinished() -> Bool {
         return didPlayerOneWin() || didPlayerTwoWin() || isStalemate()
     }
     
-    func isStalemate() -> Bool {
-        var gameOver = true
-        for index in 0...8 {
-            if (boardState[index] == 0) {
-                gameOver = false
-            }
-        }
-        return gameOver
-    }
-    
-    func didPlayerOneWin() -> Bool {
+    private func didPlayerOneWin() -> Bool {
         return checkIfPlayerWins(player: 1)
     }
     
-    func didPlayerTwoWin() -> Bool {
+    private func didPlayerTwoWin() -> Bool {
         return checkIfPlayerWins(player: 2)
     }
-    
-    func checkIfPlayerWins(player: Int) -> Bool {
+
+    private func checkIfPlayerWins(player: Int) -> Bool {
         var wins = false
-        if boardState[0] == player && boardState[1] == player && boardState[2] == player
-            || boardState[3] == player && boardState[4] == player && boardState[5] == player
-            || boardState[6] == player && boardState[7] == player && boardState[8] == player
-            || boardState[0] == player && boardState[3] == player && boardState[6] == player
-            || boardState[1] == player && boardState[4] == player && boardState[7] == player
-            || boardState[2] == player && boardState[5] == player && boardState[8] == player
-            || boardState[0] == player && boardState[4] == player && boardState[8] == player
-            || boardState[2] == player && boardState[4] == player && boardState[6] == player
+        if gameBoard[0] == player && gameBoard[1] == player && gameBoard[2] == player
+            || gameBoard[3] == player && gameBoard[4] == player && gameBoard[5] == player
+            || gameBoard[6] == player && gameBoard[7] == player && gameBoard[8] == player
+            || gameBoard[0] == player && gameBoard[3] == player && gameBoard[6] == player
+            || gameBoard[1] == player && gameBoard[4] == player && gameBoard[7] == player
+            || gameBoard[2] == player && gameBoard[5] == player && gameBoard[8] == player
+            || gameBoard[0] == player && gameBoard[4] == player && gameBoard[8] == player
+            || gameBoard[2] == player && gameBoard[4] == player && gameBoard[6] == player
         {
             wins = true
         }
         return wins
     }
 
-    func startGame() {
-        currentGameState = GameState.playerOneTurn
+    private func isStalemate() -> Bool {
+        var gameOver = true
+        for index in 0...8 {
+            if (gameBoard[index] == 0) {
+                gameOver = false
+            }
+        }
+        return gameOver
     }
     
 }
