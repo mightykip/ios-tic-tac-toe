@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonClicked(_ boardButton: TicTacToeButton) {
-        if game.isPlayerTurn() {
+        if game.isPlayerTurn() && boardButton.pieceShowing == .blank {
             if game.getPlayerSymbol() == "X" {
                 boardButton.pieceShowing = .x
             } else {
