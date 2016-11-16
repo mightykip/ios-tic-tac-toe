@@ -18,48 +18,37 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="redraw" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5ba-N9-bQg">
-                                <rect key="frame" x="20" y="28" width="627" height="339"/>
+                            <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5ba-N9-bQg">
+                                <rect key="frame" x="20" y="70" width="627" height="297"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wu-5L-8nA">
-                                        <rect key="frame" x="0.0" y="0.0" width="627" height="24"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="24"/>
-                                        <color key="textColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xfz-nl-JJW">
-                                        <rect key="frame" x="0.0" y="34" width="627" height="305"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="627" height="297"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-zp-6S3">
-                                                <rect key="frame" x="0.0" y="0.0" width="627" height="99"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="627" height="96.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxO-ZJ-dws">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="99"/>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxO-ZJ-dws" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="96.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
-                                                        <state key="normal" title="X"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WH7-ME-63J"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TB6-C1-lys">
-                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="99"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TB6-C1-lys" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="96.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A3r-oV-IqL"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgF-E5-jpC">
-                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="99"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgF-E5-jpC" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="96.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="X"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EeS-wq-D8f"/>
@@ -69,30 +58,27 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FeN-hZ-n4c">
-                                                <rect key="frame" x="0.0" y="103" width="627" height="99"/>
+                                                <rect key="frame" x="0.0" y="100.5" width="627" height="96"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgr-1C-Qyt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="99"/>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgr-1C-Qyt" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="96"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TIq-eo-KpT"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNG-NN-iIL">
-                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="99"/>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNG-NN-iIL" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="96"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="X"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K5q-hg-fvu"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zg3-nP-DPj">
-                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="99"/>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zg3-nP-DPj" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="96"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wp3-Qq-6Cd"/>
@@ -101,30 +87,27 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hWc-JN-XLu">
-                                                <rect key="frame" x="0.0" y="206" width="627" height="99"/>
+                                                <rect key="frame" x="0.0" y="200.5" width="627" height="96.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3K-1M-GBh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="99"/>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3K-1M-GBh" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="96.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="X"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZiA-YC-HqC"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jke-4B-pfi">
-                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="99"/>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jke-4B-pfi" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="96.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZC-Gp-BqH"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yz5-46-1WA">
-                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="99"/>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yz5-46-1WA" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="96.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rsN-h9-uDc"/>
@@ -138,13 +121,23 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wu-5L-8nA">
+                                <rect key="frame" x="20" y="20" width="627" height="34"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="24"/>
+                                <color key="textColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5ba-N9-bQg" secondAttribute="bottom" constant="8" symbolic="YES" id="8J0-tQ-f9x"/>
-                            <constraint firstItem="5ba-N9-bQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="I8F-di-R9b"/>
-                            <constraint firstItem="5ba-N9-bQg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Mqw-T2-ztD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5ba-N9-bQg" secondAttribute="trailing" id="fYy-F1-J0w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Wu-5L-8nA" secondAttribute="trailing" id="4bX-7T-Kl9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5ba-N9-bQg" secondAttribute="trailing" id="DXl-oq-wtL"/>
+                            <constraint firstItem="5Wu-5L-8nA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="KN1-Ov-eY7"/>
+                            <constraint firstItem="5ba-N9-bQg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="YWz-u9-Shu"/>
+                            <constraint firstItem="5ba-N9-bQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="i1u-tq-BUK"/>
+                            <constraint firstItem="5Wu-5L-8nA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vZB-an-DzF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5ba-N9-bQg" secondAttribute="bottom" constant="8" symbolic="YES" id="w5L-ud-e4c"/>
                         </constraints>
                     </view>
                     <connections>

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var messageToUser: UILabel!
 
     private let game = TicTacToeGame()
+    @IBOutlet weak var testImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,8 @@ class ViewController: UIViewController {
     func resetBoard() {
         game.reset()
         for buttonTag in 1...9 {
-            let boardButton = self.view.viewWithTag(buttonTag) as? UIButton
-            boardButton?.setTitle("", for: .normal)
+            let boardButton = self.view.viewWithTag(buttonTag) as? TicTacToeButton
+            boardButton?.pieceShowing = .blank
         }
     }
     
@@ -36,9 +37,13 @@ class ViewController: UIViewController {
         messageToUser.text = game.getMessageToShowInUI()
     }
     
-    @IBAction func buttonClicked(_ boardButton: UIButton) {
+    @IBAction func buttonClicked(_ boardButton: TicTacToeButton) {
         if game.isPlayerTurn() {
-            boardButton.setTitle(game.getPlayerSymbol(), for: .normal)
+            if game.getPlayerSymbol() == "X" {
+                boardButton.pieceShowing = .x
+            } else {
+                boardButton.pieceShowing = .o
+            }
             game.playerTookTurn(boardPosition: boardButton.tag)
             updateUIMessage()
         } else if game.isFinished() {
