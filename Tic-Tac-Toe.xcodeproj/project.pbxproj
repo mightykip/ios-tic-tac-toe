@@ -58,16 +58,24 @@
 		37C298441DD2691E007709A8 /* Tic-Tac-Toe */ = {
 			isa = PBXGroup;
 			children = (
-				37C298451DD2691E007709A8 /* AppDelegate.swift */,
 				37C298471DD2691E007709A8 /* ViewController.swift */,
 				37BBF1B31DD525BF00DAE300 /* TicTacToeGame.swift */,
 				37BBF1D91DDCC7DA00DAE300 /* TicTacToeButton.swift */,
 				37C298491DD2691E007709A8 /* Main.storyboard */,
+				37F0BD531DDCE44A00891CA7 /* supporting files */,
+			);
+			path = "Tic-Tac-Toe";
+			sourceTree = "<group>";
+		};
+		37F0BD531DDCE44A00891CA7 /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				37C298451DD2691E007709A8 /* AppDelegate.swift */,
 				37C2984C1DD2691E007709A8 /* Assets.xcassets */,
 				37C2984E1DD2691E007709A8 /* LaunchScreen.storyboard */,
 				37C298511DD2691E007709A8 /* Info.plist */,
 			);
-			path = "Tic-Tac-Toe";
+			name = "supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

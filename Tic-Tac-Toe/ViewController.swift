@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var messageToUser: UILabel!
 
     private let game = TicTacToeGame()
-    @IBOutlet weak var testImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
