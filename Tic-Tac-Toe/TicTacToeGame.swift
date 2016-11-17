@@ -17,9 +17,9 @@ class TicTacToeGame {
     private static let GameStateData: [GameState: [String]] = [
         .playerOneTurn: ["X - Your Move!", "X", "1"],
         .playerTwoTurn: ["O - Your Move!", "O", "2"],
-        .playerOneWins: ["Player X Wins!", "", ""],
-        .playerTwoWins: ["Player O Wins!", "", ""],
-        .stalemate: ["No One Wins!", "", ""]
+        .playerOneWins: ["Player X Wins!", "X", "1"],
+        .playerTwoWins: ["Player O Wins!", "O", "2"],
+        .stalemate: ["No One Wins!", "-", "0"]
     ]
     
     private var gameState = GameState.playerOneTurn
@@ -59,6 +59,10 @@ class TicTacToeGame {
         return gameState.getPlayerSymbol()
     }
     
+    func getPlayerInt() -> Int {
+        return gameState.getPlayerInt()
+    }
+    
     func isPlayerTurn() -> Bool {
         return gameState == .playerOneTurn || gameState == .playerTwoTurn
     }
@@ -90,7 +94,11 @@ class TicTacToeGame {
     }
     
     func isFinished() -> Bool {
-        return didPlayerOneWin() || didPlayerTwoWin() || isStalemate()
+        return didPlayerWin() || isStalemate()
+    }
+    
+    func didPlayerWin() -> Bool {
+        return didPlayerOneWin() || didPlayerTwoWin()
     }
     
     private func didPlayerOneWin() -> Bool {
