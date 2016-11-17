@@ -14,6 +14,9 @@
 		37C2984B1DD2691E007709A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C298491DD2691E007709A8 /* Main.storyboard */; };
 		37C2984D1DD2691E007709A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C2984C1DD2691E007709A8 /* Assets.xcassets */; };
 		37C298501DD2691E007709A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C2984E1DD2691E007709A8 /* LaunchScreen.storyboard */; };
+		37F0BD801DDD3D6800891CA7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37F0BD7E1DDD3D6800891CA7 /* Model.xcdatamodeld */; };
+		37F0BD871DDD3E5500891CA7 /* Games+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0BD851DDD3E5500891CA7 /* Games+CoreDataClass.swift */; };
+		37F0BD881DDD3E5500891CA7 /* Games+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0BD861DDD3E5500891CA7 /* Games+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		37C2984C1DD2691E007709A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37C2984F1DD2691E007709A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37C298511DD2691E007709A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37F0BD7F1DDD3D6800891CA7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		37F0BD851DDD3E5500891CA7 /* Games+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Games+CoreDataClass.swift"; sourceTree = "<group>"; };
+		37F0BD861DDD3E5500891CA7 /* Games+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Games+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 				37BBF1B31DD525BF00DAE300 /* TicTacToeGame.swift */,
 				37BBF1D91DDCC7DA00DAE300 /* TicTacToeButton.swift */,
 				37C298491DD2691E007709A8 /* Main.storyboard */,
+				37F0BD7E1DDD3D6800891CA7 /* Model.xcdatamodeld */,
+				37F0BD851DDD3E5500891CA7 /* Games+CoreDataClass.swift */,
+				37F0BD861DDD3E5500891CA7 /* Games+CoreDataProperties.swift */,
 				37F0BD531DDCE44A00891CA7 /* supporting files */,
 			);
 			path = "Tic-Tac-Toe";
@@ -152,8 +161,11 @@
 			files = (
 				37BBF1B41DD525BF00DAE300 /* TicTacToeGame.swift in Sources */,
 				37C298481DD2691E007709A8 /* ViewController.swift in Sources */,
+				37F0BD881DDD3E5500891CA7 /* Games+CoreDataProperties.swift in Sources */,
+				37F0BD801DDD3D6800891CA7 /* Model.xcdatamodeld in Sources */,
 				37BBF1DA1DDCC7DA00DAE300 /* TicTacToeButton.swift in Sources */,
 				37C298461DD2691E007709A8 /* AppDelegate.swift in Sources */,
+				37F0BD871DDD3E5500891CA7 /* Games+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +330,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		37F0BD7E1DDD3D6800891CA7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				37F0BD7F1DDD3D6800891CA7 /* Model.xcdatamodel */,
+			);
+			currentVersion = 37F0BD7F1DDD3D6800891CA7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 37C2983A1DD2691D007709A8 /* Project object */;
 }
