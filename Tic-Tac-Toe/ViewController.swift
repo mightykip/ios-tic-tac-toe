@@ -18,6 +18,20 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadGames()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUIMessage()
+        resetBoard()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    private func loadGames() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Games")
@@ -30,16 +44,6 @@ class ViewController: UIViewController {
         }
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateUIMessage()
-        resetBoard()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     func resetBoard() {
         game.reset()
         for buttonTag in 1...9 {
@@ -82,26 +86,22 @@ class ViewController: UIViewController {
         message.append("\n")
         message.append("Number of O wins: ")
         message.append(String(self.numberOfWins(playerInt: 2)))
-        
         let alert = UIAlertController(title: "Game Over",
                                       message: message,
                                       preferredStyle: .alert)
-        
         let saveAction = UIAlertAction(title: "Play Again?",
                                        style: .default,
                                        handler: { (action:UIAlertAction) -> Void in
                                         self.resetBoard()
                                         self.updateUIMessage()
         })
-        
         alert.addAction(saveAction)
-        
         present(alert,
                 animated: true,
                 completion: nil)
     }
     
-    func numberOfWins(playerInt: Int) -> Int {
+    private func numberOfWins(playerInt: Int) -> Int {
         var wins = 0;
         for game in games as! [Games] {
             if game.player == Int16(playerInt) && game.winner {
@@ -111,7 +111,7 @@ class ViewController: UIViewController {
         return wins
     }
     
-    func saveGame(player: Int16, winner: Bool) {
+    private func saveGame(player: Int16, winner: Bool) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
         let entity =  NSEntityDescription.entity(forEntityName: "Games",
