@@ -22,24 +22,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5ba-N9-bQg">
-                                <rect key="frame" x="20" y="70" width="627" height="297"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5ba-N9-bQg">
+                                <rect key="frame" x="20" y="70" width="627" height="295"/>
                                 <subviews>
-                                    <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xfz-nl-JJW">
-                                        <rect key="frame" x="0.0" y="0.0" width="627" height="297"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xfz-nl-JJW">
+                                        <rect key="frame" x="0.0" y="0.0" width="627" height="295"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-zp-6S3">
-                                                <rect key="frame" x="0.0" y="0.0" width="627" height="96.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="627" height="95.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxO-ZJ-dws" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="96.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="95.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="X"/>
                                                         <connections>
                                                             <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WH7-ME-63J"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TB6-C1-lys" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
-                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="96.5"/>
+                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="95.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
@@ -47,7 +48,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgF-E5-jpC" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
-                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="96.5"/>
+                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="95.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <state key="normal" title="X"/>
                                                         <connections>
@@ -55,10 +56,9 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FeN-hZ-n4c">
-                                                <rect key="frame" x="0.0" y="100.5" width="627" height="96"/>
+                                                <rect key="frame" x="0.0" y="99.5" width="627" height="96"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgr-1C-Qyt" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="206.5" height="96"/>
@@ -87,10 +87,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hWc-JN-XLu">
-                                                <rect key="frame" x="0.0" y="200.5" width="627" height="96.5"/>
+                                                <rect key="frame" x="0.0" y="199.5" width="627" height="95.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3K-1M-GBh" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="96.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="95.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <state key="normal" title="X"/>
                                                         <connections>
@@ -98,7 +98,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jke-4B-pfi" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
-                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="96.5"/>
+                                                        <rect key="frame" x="210.5" y="0.0" width="206" height="95.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
@@ -106,7 +106,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yz5-46-1WA" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
-                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="96.5"/>
+                                                        <rect key="frame" x="420.5" y="0.0" width="206.5" height="95.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <state key="normal" title="O"/>
                                                         <connections>
@@ -116,10 +116,8 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wu-5L-8nA">
                                 <rect key="frame" x="20" y="20" width="627" height="34"/>
@@ -137,7 +135,7 @@
                             <constraint firstItem="5ba-N9-bQg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="YWz-u9-Shu"/>
                             <constraint firstItem="5ba-N9-bQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="i1u-tq-BUK"/>
                             <constraint firstItem="5Wu-5L-8nA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vZB-an-DzF"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5ba-N9-bQg" secondAttribute="bottom" constant="8" symbolic="YES" id="w5L-ud-e4c"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5ba-N9-bQg" secondAttribute="bottom" constant="10" id="w5L-ud-e4c"/>
                         </constraints>
                     </view>
                     <connections>
